@@ -1,0 +1,13 @@
+O processo de TDD (Test-Driven Development) segue um ciclo repetitivo:
+1. Escrever um teste que descreve o comportamento desejado.
+2. Rodar o teste e verificar que ele falha (pois a funcionalidade ainda nao existe).
+3. Escrever o codigo minimo necessario para o teste passar.
+4. Rodar o teste novamente e verificar que ele passa.
+5. Opcionalmente, refatorar o codigo para melhora-lo, usando os testes para garantir que o comportamento nao mudou.
+6. Repetir o ciclo para a proxima funcionalidade.
+
+No nosso projeto, esse processo se torna um pouco mais complexo, pois trabalhamos com dois niveis de teste ao mesmo tempo:
+- Testes Funcionais: verificam o comportamento do sistema do ponto de vista do usuario final, geralmente usando o navegador (Selenium). Eles guiam o desenvolvimento em alto nivel, definindo quais funcionalidades o sistema deve ter.
+- Testes de Unidade: verificam pequenas partes do codigo isoladamente (funcoes, views, models). Eles guiam a implementacao interna de cada funcionalidade especifica.
+
+Um Teste Funcional geralmente fica falhando por varias etapas, enquanto varios ciclos de Testes de Unidade sao feitos internamente ate que a funcionalidade completa seja implementada e o Teste Funcional finalmente passe.
